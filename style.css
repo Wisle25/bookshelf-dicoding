@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    /* Default font */
+    font-family:'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Remove default style */
+h1, h2, h3, h4, h5, h6, p, button {
+    all: unset;
+}
+
+.header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    padding: .8em;
+    font-size: small;
+    color: white;
+    background-color: #3182ce;
+}
+
+.header-title {
+    font-family: 'Lobster';
+    font-size: x-large;
+    letter-spacing: .06em;
+}
+
+.search-form {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-items: center;
+}
+
+input {
+    border-radius: 8px;
+    border: 2px solid #63b3ed;
+    padding: .3em;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    background-color: rgb(236 254 255);
+}
+
+button:hover {
+    background-color: rgb(236 254 255);
+}
+
+.search-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.search-btn {
+    background-color: white;
+    padding: .62em;
+    border: 2px solid #63b3ed;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+    color: black;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    column-gap: 1.1em;
+}
+
+a {
+    /* background-color: black; */
+    height: 100%;
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    width: 135vh;
+}
+
+aside {
+    flex: 1;
+    margin: 2em 2em 0 1em;
+}
+
+form {
+    padding: 1.3em;
+    border: 2px solid #3182ce;
+    border-radius: 4px;
+}
+
+.bookshelf-title {
+    font-family: 'Bebas Neue';
+    font-size: xx-large;
+    letter-spacing: .1em;
+}
+
+.line {
+    background-color: black;
+    padding: 1px;
+    width: 100%;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shelf-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1em;
+    row-gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 5px;
+}
+
+.title {
+    font-weight: bold;
+    font-family: 'Lobster';
+    font-size: x-large;
+    width: fit-content;
+    margin: auto;
+    letter-spacing: .15em;
+    margin-bottom: .5em;
+    display: block;
+}
+
+.btn {
+    padding: .4em;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+.move-btn {
+    background-color: #3182ce;
+}
+
+.remove-btn:hover {
+    background-color: rgb(248 113 113);
+}
+
+.remove-btn {
+    background-color: rgb(220 38 38);
+}
+
+.move-btn:hover {
+    background-color: rgb(96 165 250);
+}

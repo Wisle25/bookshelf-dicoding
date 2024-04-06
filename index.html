@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+</head>
+<body>
+  <header class="header-bar">
+    <!-- Logo -->
+    <h1 class="header-title">Bookshelf</h1>
+
+    <!-- Search Bar -->
+    <form class="search-form">
+      <input type="text" placeholder="Search for books here!" class="search-input" >
+      <button type="submit" class="search-btn">
+        <i class="gg-search"></i>
+      </button>     
+    </form>
+
+    <!-- Nav -->
+    <nav>
+      <a>Unfinished</a>
+      <a>Finished</a>
+    </nav>
+  </header>
+
+  <!-- Where the bookshelf placed -->
+  <div class="wrapper">
+    <main class="main-container">
+      <h1 class="bookshelf-title">Bookshelf</h1>
+      <span class="line"></span>
+      <h2 id="status-title">Finished Reading Bookshelf</h2>
+  
+      <div class="shelf-wrapper">
+        <div class="book-card">
+          <h3 class="title">Buku Satu</h3>
+          <p>Author: <span>Author Satu</span></p>
+          <p>Tahun Rilis: <span>2004</span></p>
+  
+          <!-- Buttons -->
+          <section style="margin-top: .8em;">
+            <button class="btn move-btn">Pindahkan</button>
+            <button class="btn remove-btn">Hapus</button>
+          </section>
+        </div>
+        
+      </d>
+    </main>
+
+    <aside>
+      <form>
+        <h3 class="title">Tambahkan Buku</h3>
+        <section>
+          <label for="title">Judul</label>
+          <input type="text" name="title" >
+        </section>
+        <section>
+          <label for="author">Author</label>
+          <input type="text" name="author" >
+        </section>
+        <section>
+          <label for="year">Tahun Rilis</label>
+          <input type="number" name="year" >
+        </section>
+        <button type="submit" class="btn move-btn" style="width: 98%; margin-top: 1em;">Tambahkan</button>
+      </form>
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
