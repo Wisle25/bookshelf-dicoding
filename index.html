@@ -9,65 +9,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/pen.css' rel='stylesheet'>
 </head>
 <body>
   <header class="header-bar">
     <!-- Logo -->
     <h1 class="header-title">Bookshelf</h1>
-
+    
     <!-- Search Bar -->
-    <form class="search-form">
-      <input type="text" placeholder="Search for books here!" class="search-input" >
+    <form class="search-form" onsubmit="search(event)">
+      <input type="text" placeholder="Search for books here!" class="search-input" oninput="formFindOnInput(event)">
       <button type="submit" class="search-btn">
         <i class="gg-search"></i>
       </button>     
     </form>
-
+    
     <!-- Nav -->
     <nav>
-      <a>Unfinished</a>
-      <a>Finished</a>
+      <a onclick="switchPage(false)">Unfinished</a>
+      <a onclick="switchPage(true)">Finished</a>
     </nav>
   </header>
-
+  
   <!-- Where the bookshelf placed -->
   <div class="wrapper">
     <main class="main-container">
       <h1 class="bookshelf-title">Bookshelf</h1>
       <span class="line"></span>
-      <h2 id="status-title">Finished Reading Bookshelf</h2>
-  
-      <div class="shelf-wrapper">
-        <div class="book-card">
-          <h3 class="title">Buku Satu</h3>
-          <p>Author: <span>Author Satu</span></p>
-          <p>Tahun Rilis: <span>2004</span></p>
-  
-          <!-- Buttons -->
-          <section style="margin-top: .8em;">
-            <button class="btn move-btn">Pindahkan</button>
-            <button class="btn remove-btn">Hapus</button>
-          </section>
-        </div>
+      <h2><span id="page-title">Unfinished</span> Reading Bookshelf</h2>
+      
+      <!-- Where the book list will be -->
+      <div class="shelf-wrapper" id="books-list">
         
-      </d>
+      </div>
     </main>
-
+    
     <aside>
-      <form>
+      <form onsubmit="addBook(event)">
         <h3 class="title">Tambahkan Buku</h3>
-        <section>
-          <label for="title">Judul</label>
-          <input type="text" name="title" >
-        </section>
-        <section>
-          <label for="author">Author</label>
-          <input type="text" name="author" >
-        </section>
-        <section>
-          <label for="year">Tahun Rilis</label>
-          <input type="number" name="year" >
-        </section>
+        
+        <label for="title">Judul</label>
+        <input type="text" name="title" oninput="formAddOnInput(event)" placeholder="Masukan informasi data">
+        <label for="author">Author</label>
+        <input type="text" name="author" oninput="formAddOnInput(event)" placeholder="Masukan informasi data">
+        <label for="year">Tahun Rilis</label>
+        <input type="number" name="year" oninput="formAddOnInput(event)" placeholder="Masukan informasi data">
         <button type="submit" class="btn move-btn" style="width: 98%; margin-top: 1em;">Tambahkan</button>
       </form>
     </aside>
