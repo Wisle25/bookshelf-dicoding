@@ -18,7 +18,8 @@ const addBook = (e) => {
     addBookForm = {
         ...addBookForm,
         id: + new Date(),
-        isComplete: false
+        isComplete: false,
+        year: parseInt(addBookForm["year"])
     };
     
     // Add to database then reset the form
